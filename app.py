@@ -3,13 +3,13 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/jobs', methods=['GET'])
 def search_jobs():
     # api_key =  # Replace with your actual Google API key
-    # cse_id = # Replace with your actual CSE ID
+    #cse_id =  # Replace with your actual CSE ID
 
-    keyword = request.args.get('web developer')
-    location = request.args.get('toronto')
+    keyword = request.args.get('keyword')
+    location = request.args.get('location')
 
     # Construct the Google CSE search query
     search_query = f'site:https://www.linkedin.com jobs {keyword} {location}'  # Replace 'example.com' with the desired job search website
@@ -37,3 +37,7 @@ def search_jobs():
 
 if __name__ == '__search_jobs__':
     app.run(host='localhost', port=5000, debug=True)
+
+while True:
+    pass
+
