@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def search_jobs():
-    api_key = 'AIzaSyCgn_YK7927yAncAl_z4ObaCHkuFzIgOow'  # Replace with your actual Google API key
-    cse_id = '832834dab627040ba'  # Replace with your actual CSE ID
+    # api_key =  # Replace with your actual Google API key
+    # cse_id = # Replace with your actual CSE ID
 
     keyword = request.args.get('web developer')
     location = request.args.get('toronto')
